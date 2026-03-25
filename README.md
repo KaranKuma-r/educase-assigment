@@ -1,164 +1,145 @@
-# educase-assigment
-School Management API
+<h1 align="center">📚 School Management API</h1>
 
-Hi 👋
-This is a backend project built using Node.js, Express.js, and MySQL.
+<p align="center">
+Backend project built using <b>Node.js</b>, <b>Express.js</b>, and <b>MySQL</b>
+</p>
 
-The goal of this project is to:
+<hr/>
 
-* Add new schools
-* Fetch schools sorted by distance from user location
+<h2>📌 Overview</h2>
+<p>
+This project provides APIs to manage school data.
+Users can add new schools and fetch schools sorted by distance from their location.
+</p>
 
----
+<hr/>
 
-TECH STACK
+<h2>🚀 Tech Stack</h2>
+<ul>
+  <li>Node.js</li>
+  <li>Express.js</li>
+  <li>MySQL</li>
+  <li>dotenv</li>
+  <li>mysql2</li>
+</ul>
 
-* Node.js
-* Express.js
-* MySQL
-* dotenv
-* mysql2
+<hr/>
 
----
+<h2>📁 Project Structure</h2>
 
-PROJECT STRUCTURE
-
+<pre>
 school-api/
 
-│
-├── src/
-│   ├── config/
-│   │   └── db.js → Database connection
-│
-│   ├── controllers/
-│   │   └── schoolController.js → API logic
-│
-│   ├── routes/
-│   │   └── schoolRoutes.js → API routes
-│
-│   ├── utils/
-│   │   └── distance.js → Distance calculation logic
-│
-│   └── app.js → Main server file
-│
-├── .env → Environment variables
-├── package.json
-├── README.md
+src/
+ ├── config/
+ │    └── db.js  → Database connection
+ ├── controllers/
+ │    └── schoolController.js  → API logic
+ ├── routes/
+ │    └── schoolRoutes.js  → API routes
+ ├── utils/
+ │    └── distance.js  → Distance calculation
+ └── app.js  → Main server
 
----
+.env  → Environment variables
+package.json
+README.md
+</pre>
 
-DATABASE SETUP
+<hr/>
 
-Run this in MySQL:
+<h2>🗄️ Database Setup</h2>
 
+<pre>
 CREATE DATABASE school_db;
 
-USE school_db;
-
 CREATE TABLE schools (
-id INT AUTO_INCREMENT PRIMARY KEY,
-name VARCHAR(255),
-address VARCHAR(255),
-latitude FLOAT,
-longitude FLOAT
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(255),
+  address VARCHAR(255),
+  latitude FLOAT,
+  longitude FLOAT
 );
+</pre>
 
----
+<hr/>
 
-ENV FILE (.env)
+<h2>⚙️ Run Project</h2>
 
-PORT=5000
-DB_HOST=localhost
-DB_USER=root
-DB_PASSWORD=
-DB_NAME=school_db
-
----
-
-RUN PROJECT
-
+<pre>
 npm install
-npx nodemon src/app.js
+node src/app.js
+</pre>
 
-Server will run on:
-http://localhost:5000
+<p>Server runs on: http://localhost:5000</p>
 
----
+<hr/>
 
-API ENDPOINTS
+<h2>📌 API Endpoints</h2>
 
-1. Add School
+<h3>1. Add School</h3>
+<p><b>POST</b> /api/addSchool</p>
 
-POST /api/addSchool
-
-Body:
+<pre>
 {
-"name": "ABC School",
-"address": "Delhi",
-"latitude": 28.7041,
-"longitude": 77.1025
+  "name": "ABC School",
+  "address": "Delhi",
+  "latitude": 28.7041,
+  "longitude": 77.1025
 }
+</pre>
 
-Function:
-
-* Validates input
-* Stores data in database
-
----
-
-2. List Schools
-
-GET /api/listSchools?latitude=28.6&longitude=77.2
-
-Function:
-
-* Fetches all schools
-* Calculates distance using Haversine formula
-* Sorts nearest to farthest
+<p>
+✔ Validates input <br/>
+✔ Stores data in database
+</p>
 
 ---
 
-DISTANCE LOGIC
+<h3>2. List Schools</h3>
+<p><b>GET</b> /api/listSchools?latitude=28.6&longitude=77.2</p>
 
-Haversine formula is used to calculate distance between two coordinates.
-This helps in showing nearest schools first.
+<p>
+✔ Fetches all schools <br/>
+✔ Calculates distance <br/>
+✔ Sorts nearest to farthest
+</p>
 
----
+<hr/>
 
-TESTING
+<h2>📏 Distance Logic</h2>
+<p>
+Distance is calculated using the <b>Haversine formula</b> to find accurate distance between coordinates.
+</p>
 
-Use:
+<hr/>
 
-* Postman
-* Thunder Client
+<h2>🧪 Testing</h2>
+<ul>
+  <li>Postman</li>
+  <li>Thunder Client</li>
+</ul>
 
----
+<hr/>
 
-DEPLOYMENT
+<h2>🌐 Deployment</h2>
+<ul>
+  <li>Backend: Render</li>
+  <li>Database: Railway</li>
+</ul>
 
-* Backend: Render
-* Database: Railway
+<hr/>
 
----
+<h2>📦 Deliverables</h2>
+<ul>
+  <li>Source Code (GitHub)</li>
+  <li>Live API</li>
+  <li>Postman Collection</li>
+</ul>
 
-DELIVERABLES
+<hr/>
 
-* GitHub repository
-* Live API link
-* Postman collection
-
----
-
-WHAT I LEARNED
-
-* Building REST APIs using Node.js
-* Connecting MySQL with backend
-* Handling validation and errors
-* Implementing distance-based sorting
-* Writing clean backend structure
-
-----
-
-FINAL NOTE
-
-This project demonstrates a complete backend workflow including API development, database integration, and real-world logic implementation.
+<h2>🙌 Final Note</h2>
+<p>
+This project demonstrates API development, database integration, and real-world distance-based sorting.
+</p>
