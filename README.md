@@ -68,8 +68,7 @@ CREATE TABLE schools (
 
 <pre>
 npm install
-node src/app.js
-</pre>
+npx nodemon src/app.js
 
 <p>Server runs on: http://localhost:5000</p>
 

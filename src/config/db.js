@@ -10,6 +10,6 @@ db.connect((err) => {
     console.log("MySQL Connected ✅");
   }
 });
-// 
+// ...db.addListener.apply
 
 module.exports = db;
