@@ -13,7 +13,7 @@ Click Here to Test
 
 <hr/>
 
-<h2>📌 Overview</h2>
+<h2> Overview</h2>
 <p>
 This project provides REST APIs to manage school data.  
 Users can:
