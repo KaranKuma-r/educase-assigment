@@ -101,7 +101,7 @@ https://school-api-9sjq.onrender.com/api/addSchool
 {
   "name": "ABC School",
   "address": "Delhi",
-  "latitude": 28.7041,
+  "latitude": 28.7041
   "longitude": 77.1025
 }
 </pre>
