@@ -68,7 +68,7 @@ CREATE TABLE schools (
   name VARCHAR(255),
   address VARCHAR(255),
   latitude FLOAT
-  longitude FLOAT
+  longitude FLOAT,
 );
 </pre>
 
